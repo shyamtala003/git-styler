@@ -1,32 +1,34 @@
-# 🚀 Introducing Git Styler: Make Your Git Commits Cleaner and Faster!
+# 🦄 Git Styler
 
-**Tired of messy commit messages?** Keeping a clean Git history is crucial for collaboration, but writing well-structured commit messages every time can be a hassle. Enter **Git Styler** – a CLI tool that simplifies commit message styling and enforces structure effortlessly. 🚀
+**Git Styler** is a CLI tool designed to simplify and standardize commit message styling by providing structured commit commands. It follows the **conventional commit format**, helping developers maintain clean, consistent, and meaningful commit histories with ease.
+
+---
 
 ## Why Git Styler? 🤔
 
-Writing commit messages manually can lead to inconsistencies like:
+Writing commit messages manually often leads to inconsistencies, such as:
 
 - Unclear or unformatted commit messages
 - Inconsistent use of emojis or prefixes
-- No standard format for different types of commits
+- Lack of a standard format for different types of commits
 
-**Git Styler solves this** by providing easy-to-use commands for well-structured commits, following conventional commit formats.
+**Git Styler solves these issues** by offering easy-to-use commands for well-structured commits, ensuring your commit history is clean, readable, and professional.
 
 ---
 
 ## 🌟 Features
 
-✅ **Predefined commit types** with appropriate emojis 📦 🐛 ♻️ 📖  
-✅ **Shortcut commands** for quick commits (e.g., `gfeat`, `gfix`, `grel`, etc.)  
-✅ **Automatic `git push`** after committing changes  
-✅ **Color-coded logs** for better visibility  
-✅ **No extra configuration needed** – works out of the box!
+- ✅ **Predefined commit types** with appropriate emojis (📦 🐛 ♻️ 📖)
+- ✅ **Shortcut commands** for quick commits (e.g., `gfeat`, `gfix`, `grel`, etc.)
+- ✅ **Automatic `git push`** after committing changes
+- ✅ **Color-coded logs** for better visibility
+- ✅ **No extra configuration needed** – works out of the box!
 
 ---
 
 ## 🚀 Installation
 
-Git Styler should be installed **globally** so that commands are available system-wide.
+Install **Git Styler globally** to make the commands available system-wide:
 
 ```sh
 npm install -g git-styler
@@ -99,25 +101,20 @@ git-styler --help
 
 ---
 
-## 🛠️ How Git Styler Works Under the Hood
+## 🛠️ How Git Styler Works Under the Hood(Dependencies)
 
-Git Styler is built using:
+- [commander](https://www.npmjs.com/package/commander) (for CLI command handling)
+- [child_process](https://nodejs.org/api/child_process.html) (for executing git commands)
+- [path](https://nodejs.org/api/path.html) (for script detection)
 
-- **Commander.js** – For handling CLI commands
-- **child_process** – To execute Git commands
-- **path module** – For script detection
+## License
 
-The tool intercepts Git commands and ensures they follow a structured format before committing. No extra configuration is needed! 🎉
+This project is licensed under the MIT License.
+
+## Author
+
+[Shyam Tala](https://github.com/shyamtala003)
 
 ---
 
-## 📢 Spread the Word!
-
-If you find Git Styler useful, please **star the GitHub repo** and share it with your team! ⭐  
-[GitHub Repo](https://github.com/shyamtala003/git-styler)
-
-🚀 **Start making your commit history cleaner today!**
-
-```sh
-npm install -g git-styler
-```
+Enjoy committing with style! 🚀
