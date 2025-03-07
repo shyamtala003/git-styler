@@ -1,6 +1,6 @@
 {
   "name": "git-styler",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "bin": {
     "git-styler": "./index.js",
