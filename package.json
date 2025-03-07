@@ -10,7 +10,8 @@
     "gdoc": "./index.js",
     "gtest": "./index.js",
     "gbreak": "./index.js",
-    "grel": "./index.js"
+    "grel": "./index.js",
+    "gref": "./index.js"
   },
   "scripts": {
     "test": "node index.js"

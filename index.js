@@ -15,6 +15,7 @@ const commitTypes = {
   gtest: "🤖 TEST",
   gbreak: "‼️ BREAKING",
   grel: "🦄 RELEASE",
+  gref: "♻️ REFACTOR",
 };
 
 // Detect if the script was executed directly (e.g., `grel`)
