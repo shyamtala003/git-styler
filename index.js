@@ -3,6 +3,8 @@
 const { Command } = require("commander");
 const { execSync } = require("child_process");
 const path = require("path");
+const { style } = require("./util/logStyler");
+const logger = style();
 
 const program = new Command();
 const commitTypes = {
@@ -25,9 +27,9 @@ const runGitCommand = (prefix, message) => {
     execSync(`git add . && git commit -m "${commitMessage}" && git push`, {
       stdio: "inherit",
     });
-    console.log(`✅ Commit Successful: ${commitMessage}`);
+    logger.rgb(0, 255, 0).apply(`✅ Commit Successful: ${commitMessage}`);
   } catch (error) {
-    console.error("❌ Error committing changes:", error.message);
+    logger.rgb(255, 0, 0).apply("❌ Error committing changes:", error.message);
     process.exit(1);
   }
 };

@@ -72,7 +72,7 @@ class StyledText {
    */
   apply(text) {
     const styles = this.styles.join("");
-    return `${styles}${text}${StyledText.RESET}`;
+    return console.log(`${styles}${text}${StyledText.RESET}`);
   }
 }
 
