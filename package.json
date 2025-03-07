@@ -1,6 +1,6 @@
 {
   "name": "git-styler",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "bin": {
     "git-styler": "./index.js",
@@ -16,9 +16,24 @@
   "scripts": {
     "test": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "index.js",
+    "util/",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shyamtala003/git-styler"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "git commit",
+    "emoji commit",
+    "git commit log"
+  ],
+  "author": "Shyam Tala (https://github.com/shyamtala003)",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "commander": "^13.1.0",
