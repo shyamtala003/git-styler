@@ -1,0 +1,26 @@
+{
+  "name": "git-styler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "git-styler": "./index.js",
+    "gfeat": "./index.js",
+    "gimp": "./index.js",
+    "gfix": "./index.js",
+    "gdoc": "./index.js",
+    "gtest": "./index.js",
+    "gbreak": "./index.js",
+    "grel": "./index.js"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "execa": "^9.5.2"
+  }
+}
