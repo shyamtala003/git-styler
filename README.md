@@ -79,7 +79,7 @@ This project is licensed under the MIT License.
 
 ## Author
 
-Shyam Tala
+[Shyam Tala](https://github.com/shyamtala003)
 
 ---
 
