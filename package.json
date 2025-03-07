@@ -1,6 +1,6 @@
 {
   "name": "git-styler",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "index.js",
   "bin": {
     "git-styler": "./index.js",
@@ -28,9 +28,11 @@
   "keywords": [
     "git",
     "commit",
-    "git commit",
-    "emoji commit",
-    "git commit log"
+    "style",
+    "formatter",
+    "cli",
+    "commitlint",
+    "git hooks"
   ],
   "author": "Shyam Tala (https://github.com/shyamtala003)",
   "license": "MIT",
