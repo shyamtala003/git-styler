@@ -2,10 +2,9 @@
 
 const { Command } = require("commander");
 const { execSync } = require("child_process");
+const path = require("path");
 
 const program = new Command();
-
-// Define commit types
 const commitTypes = {
   gfeat: "📦 NEW",
   gimp: "👌 IMPROVE",
@@ -16,35 +15,37 @@ const commitTypes = {
   grel: "🦄 RELEASE",
 };
 
-// Function to run git commands
+// Detect if the script was executed directly (e.g., `grel`)
+const scriptName = path.basename(process.argv[1]);
+const commandKey = Object.keys(commitTypes).find((key) => key === scriptName);
+
 const runGitCommand = (prefix, message) => {
   try {
     const commitMessage = `${prefix}: ${message}`;
     execSync(`git add . && git commit -m "${commitMessage}" && git push`, {
       stdio: "inherit",
     });
-    console.log(`✅ Commit & Push Successful: ${commitMessage}`);
+    console.log(`✅ Commit Successful: ${commitMessage}`);
   } catch (error) {
     console.error("❌ Error committing changes:", error.message);
     process.exit(1);
   }
 };
 
-// Set the CLI name explicitly
-program.name("git-styler");
+// If the script was run directly (e.g., `grel "Version 0.0.1"`), handle it
+if (commandKey) {
+  runGitCommand(commitTypes[commandKey], process.argv.slice(2).join(" "));
+} else {
+  // Register all commands under `git-styler`
+  program.name("git-styler");
+  Object.entries(commitTypes).forEach(([cmd, prefix]) => {
+    program
+      .command(cmd)
+      .argument("<message...>", "Commit message")
+      .description(`Commit with ${prefix} type`)
+      .action((message) => runGitCommand(prefix, message.join(" ")));
+  });
 
-// Debug arguments received
-console.log("Arguments received:", process.argv);
-
-// Define commands
-Object.entries(commitTypes).forEach(([cmd, prefix]) => {
-  program
-    .command(`${cmd} <message>`)
-    .description(`Commit with ${prefix} type`)
-    .action((message) => runGitCommand(prefix, message));
-});
-
-// Manually handle direct execution
-if (require.main === module) {
+  console.log("Arguments received:", process.argv);
   program.parse(process.argv);
 }
