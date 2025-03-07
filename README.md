@@ -14,9 +14,24 @@ Git Styler is a CLI tool that simplifies commit message styling by providing str
 
 ## Installation
 
+### 🔴 Important Note
+
+This package should be installed **globally**, not locally.
+
+#### ✅ Correct Installation:
+
 ```sh
 npm install -g git-styler
 ```
+
+#### ❌ Incorrect (Local Installation - Avoid This):
+
+```sh
+npm install git-styler
+```
+
+> **Why?**  
+> Installing globally (`-g`) ensures that commands like `gfeat`, `gfix`, `grel`, etc., are available system-wide. If installed locally, these commands **won't be recognized in the terminal** outside the project.
 
 ## Usage
 
